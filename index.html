@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="rectangle">
+        <div class="basket-icon" onclick="toggleBasketMenu()">
+            <img src="icons8-shopping-cart-50.png" alt="Basket Icon">
+            <div class="basket-menu" id="basketMenu">
+            </div>
+        </div>
+        <h2>Визитівки</h2>
+        <select id="filter" onchange="loadData()">
+            <option value="filter0">Усе</option>
+            <option value="filter1">Фільтр 1</option>
+            <option value="filter2">Фільтр 2</option>
+        </select>
+        <div id="sortButtons">
+            <button onclick="sortByDescriptionAscending()">Sort by Description (A-Z)</button>
+            <button onclick="sortByPriceAscending()">Sort by Price (Low to High)</button>
+            <button onclick="sortByPriceDescending()">Sort by Price (High to Low)</button>
+        </div>
+        
+        <div id="filterButtons">
+            <label for="minPrice">Min Price:</label>
+            <input type="number" id="minPrice" placeholder="Min Price">
+        
+            <label for="maxPrice">Max Price:</label>
+            <input type="number" id="maxPrice" placeholder="Max Price">
+        
+            <button onclick="filterByPriceRange()">Filter by Price Range</button>
+        </div>
+        <div id="card-container" class="card-container">
+            <!-- Cards will be dynamically added here -->
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <img src="rizdviane.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
